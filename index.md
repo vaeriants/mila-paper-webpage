@@ -4,19 +4,8 @@ title: {{ site.name }}
 ---
 
 
----
-
-# Table of contents
-
-* [Overview](#overview)
-   
-   
----
-
-<a name="overview"></a>
-# Overview
-
-
+Introduction
+============
 Deep generative models are popular nowadays when used for unsupervised
 learning and for modeling structured outputs. In both cases, the
 variable that one wants to model contains some structure that cannot be
@@ -39,13 +28,13 @@ We focus on the last category in this
 monograph, as for the problems that we are going to visit it is a
 natural assumption to make.
 
-Specifically, the Variational Autoencoders introduced by @kingma2013auto
-assumes a continuous latent variable model, with a Gaussian prior in the
-latent space. It is a reasonable assumption to make in many cases, such
-as for visual imagery: when we move the latent representation of an
-image in the vicinity of the latent space, it corresponds to changes in
-shape, color, intensity of light, location of an object, or different
-kinds of high level semantics of the image.
+Specifically, the Variational Autoencoders introduced by \[26\] assumes
+a continuous latent variable model, with a Gaussian prior in the latent
+space. It is a reasonable assumption to make in many cases, such as for
+visual imagery: when we move the latent representation of an image in
+the vicinity of the latent space, it corresponds to changes in shape,
+color, intensity of light, location of an object, or different kinds of
+high level semantics of the image.
 
 However, training deep continuous latent variable models with nonlinear
 mapping between the latent code and the observed variable was not so
@@ -82,40 +71,3 @@ model, with a hope to help deep learning researchers to better
 understand the probabilistic aspect of deep generative models and how to
 use them as a tool.
 
-
----
-
-%<a name="section"></a>
-%
-%# Section
-%
-%* Some
-%* elements
-%* in
-%* a
-%* list
-%
-%<a name="subsection_1"></a>
-%
-%## Subsection 1
-%
-%Here is some inline math: \\(y = ax + b\\). Here is some other math:
-%
-%$$
-%    \sin^2\theta + \cos^2\theta = 1
-%$$
-%
-%<a name="subsection_2"></a>
-%
-%## Subsection 2
-%
-%**Bold** and _italics_.
-%
-%| Name  | Arbitrary quantity |
-%| ----- | ------------------ |
-%| A[^1] | 33                 |
-%| B     | 42                 |
-%
-%---
-%
-%[^1]: Some footnote explaining A.
