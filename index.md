@@ -14,8 +14,8 @@ title: {{ site.name }}
 ---
 
 <a name="overview"></a>
-Overview
-============
+# Overview
+
 
 Deep generative models are popular nowadays when used for unsupervised
 learning and for modeling structured outputs. In both cases, the
@@ -84,38 +84,38 @@ use them as a tool.
 
 
 ---
-#
-#<a name="section"></a>
-#
-## Section
-#
-#* Some
-#* elements
-#* in
-#* a
-#* list
-#
-#<a name="subsection_1"></a>
-#
-### Subsection 1
-#
-#Here is some inline math: \\(y = ax + b\\). Here is some other math:
-#
-#$$
-#    \sin^2\theta + \cos^2\theta = 1
-#$$
-#
-#<a name="subsection_2"></a>
-#
-### Subsection 2
-#
-#**Bold** and _italics_.
-#
-#| Name  | Arbitrary quantity |
-#| ----- | ------------------ |
-#| A[^1] | 33                 |
-#| B     | 42                 |
-#
-#---
-#
-#[^1]: Some footnote explaining A.
+
+%<a name="section"></a>
+%
+%# Section
+%
+%* Some
+%* elements
+%* in
+%* a
+%* list
+%
+%<a name="subsection_1"></a>
+%
+%## Subsection 1
+%
+%Here is some inline math: \\(y = ax + b\\). Here is some other math:
+%
+%$$
+%    \sin^2\theta + \cos^2\theta = 1
+%$$
+%
+%<a name="subsection_2"></a>
+%
+%## Subsection 2
+%
+%**Bold** and _italics_.
+%
+%| Name  | Arbitrary quantity |
+%| ----- | ------------------ |
+%| A[^1] | 33                 |
+%| B     | 42                 |
+%
+%---
+%
+%[^1]: Some footnote explaining A.
