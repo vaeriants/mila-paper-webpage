@@ -26,12 +26,12 @@ data, etc.
 
 There exists many ways to model the structure of a multivariate
 distribution, such as 
-   (1) **autoregressive models** which assume the joint
+   1. **autoregressive models** which assume the joint
 probability of the random variables can be factorized as a product of
 distributions, 
-   (2) **energy-based models** that define the interaction, or
+   2. **energy-based models** that define the interaction, or
 compatibility between the values of the random variables, and 
-   (3) **latent-variable models** that assume there exists an unobserved latent
+   3. **latent-variable models** that assume there exists an unobserved latent
 variate which can often be thought of as a lower dimensional
 representation of the data. 
 
