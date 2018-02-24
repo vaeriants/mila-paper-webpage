@@ -3,6 +3,10 @@ layout: default
 title: {{ site.name }}
 ---
 
+
+Introduction
+============
+
 Deep generative models are popular nowadays when used for unsupervised
 learning and for modeling structured outputs. In both cases, the
 variable that one wants to model contains some structure that cannot be
