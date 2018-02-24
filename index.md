@@ -4,6 +4,16 @@ title: {{ site.name }}
 ---
 
 
+---
+
+# Table of contents
+
+* [Section](#section)
+    * [Subsection 1](#subsection_1)
+    * [Subsection 2](#subsection_2)
+
+---
+
 Introduction
 ============
 
@@ -15,13 +25,17 @@ correlation. Examples include natural images, natural languages, audio
 data, etc.
 
 There exists many ways to model the structure of a multivariate
-distribution, such as (1) autoregressive models which assume the joint
+distribution, such as 
+   (1) **autoregressive models** which assume the joint
 probability of the random variables can be factorized as a product of
-distributions, (2) energy-based model that define the interaction, or
-compatibility between the values of the random variables, and (3)
-latent-variable models that assume there exists an unobserved latent
+distributions, 
+   (2) **energy-based models** that define the interaction, or
+compatibility between the values of the random variables, and 
+   (3) **latent-variable models** that assume there exists an unobserved latent
 variate which can often be thought of as a lower dimensional
-representation of the data. We focus on the last category in this
+representation of the data. 
+
+We focus on the last category in this
 monograph, as for the problems that we are going to visit it is a
 natural assumption to make.
 
@@ -47,7 +61,7 @@ the *Variational Inference* (VI), which is to cast the inference process
 as an optimization problem by dealing with a lower or upper bound on the
 original objective. This is different from the sampling-based *Markov
 Chain Monte Carlo* (MCMC) methods in many ways. One important aspect is
-the *bias-and-variance* trade-off underlying these two classes of
+the **bias-and-variance** trade-off underlying these two classes of
 algorithms. The MCMC methods often result in high variance estimates but
 are asymptotically unbiased, while the VI methods have lower variance
 but due to its choice of (often well-understood and tractable)
@@ -68,15 +82,6 @@ model, with a hope to help deep learning researchers to better
 understand the probabilistic aspect of deep generative models and how to
 use them as a tool.
 
-
-
----
-
-# Table of contents
-
-* [Section](#section)
-    * [Subsection 1](#subsection_1)
-    * [Subsection 2](#subsection_2)
 
 ---
 
