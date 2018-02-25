@@ -87,7 +87,8 @@ use them as a tool.
     * Amortized variational inference
 * Information theoretic intuition of the ELBO
 * Autoencoders as generative models
-* The double-edged sword: $$D_{KL}(q||p)$$
+* The double-edged sword: 
+$$D_{KL}(q||p)$$
 * Improving the models: the Holy Trinity
 * Evaluating the model
 * Variance reduction
