@@ -38,8 +38,12 @@ the vicinity of the latent space, it corresponds to changes in shape,
 color, intensity of light, location of an object, or different kinds of
 high level semantics of the image.
 
-![alt text](https://docs.google.com/gview?embedded=true&url=https://github.com/vaeriants/vaeriants.github.io/blob/master/assets/kingma14_freyface_10x10.pdf "Frey Face Interpolation")
- 
+<object data="https://github.com/vaeriants/vaeriants.github.io/blob/master/assets/kingma14_freyface_10x10.pdf" type="application/pdf" width="400px" height="400px">
+    <embed src="https://github.com/vaeriants/vaeriants.github.io/blob/master/assets/kingma14_freyface_10x10.pdf">
+        This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/vaeriants/vaeriants.github.io/blob/master/assets/kingma14_freyface_10x10.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 However, training deep continuous latent variable models with nonlinear
 mapping between the latent code and the observed variable was not so
 successful only until recently. This is because evaluating the
