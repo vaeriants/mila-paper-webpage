@@ -38,8 +38,8 @@ the vicinity of the latent space, it corresponds to changes in shape,
 color, intensity of light, location of an object, or different kinds of
 high level semantics of the image.
 
-<img src="/assets/kingma14_freyface_10x10.jpg" width="150">
-<img src="/assets/hou16_celeba.jpg" width="200">
+<img src="/assets/kingma14_freyface_10x10.jpg" width="250">
+<img src="/assets/hou16_celeba.jpg" width="300">
 
 However, training deep continuous latent variable models with nonlinear
 mapping between the latent code and the observed variable was not so
