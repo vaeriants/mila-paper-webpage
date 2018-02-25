@@ -4,6 +4,8 @@ title: {{ site.name }}
 ---
 
 
+---
+
 Introduction
 ============
 Deep generative models are popular nowadays when used for unsupervised
@@ -46,7 +48,7 @@ way. So we need to *approximately* infer the latent representation. We
 will talk more about this in \[\].
 
 We rely heavily on a family of approximate inference techniques known as
-the *Variational Inference* (VI), which is to cast the inference process
+the **Variational Inference** (VI), which is to cast the inference process
 as an optimization problem by dealing with a lower or upper bound on the
 original objective. This is different from the sampling-based *Markov
 Chain Monte Carlo* (MCMC) methods in many ways. One important aspect is
@@ -70,4 +72,26 @@ objective, (5) training details, and (6) different ways to improve the
 model, with a hope to help deep learning researchers to better
 understand the probabilistic aspect of deep generative models and how to
 use them as a tool.
+
+---
+
+# Table of contents
+* Background
+    * Latent Variable Models: What is it good for?
+    * Training Latent Variable Models
+        * Maximum likelihood principle recap
+        * Make your best guess. The EM algorithm
+* Variational inference
+    * The evidence lower bound
+    * Stochastic variational inference
+    * Amortized variational inference
+* Information theoretic intuition of the ELBO
+* Autoencoders as generative models
+* The double-edged sword: $D_{KL}(q||p)$
+* Improving the models: the Holy Trinity
+* Evaluating the model
+* Variance reduction
+
+---
+
 
