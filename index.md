@@ -41,10 +41,7 @@ high level semantics of the image.
 
 
 <p style="text-align:center;">
-   <figure>
 <img src="/assets/kingma14_freyface_10x10.jpg" width="280">
-      <figcaption>This is my caption text.</figcaption>
-</figure>
 </p>
 
 <p style="text-align:center;">
