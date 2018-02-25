@@ -40,11 +40,17 @@ high level semantics of the image.
 
 <p style="text-align:center;">
 <img src="/assets/kingma14_freyface_10x10.jpg" width="280">
+</p>
 
+<p style="text-align:center;">
 Frey face manifold from [kingma14]
+</p>
 
+<p style="text-align:center;">
 <img src="/assets/hou16_celeba.jpg" width="550">
+</p>
 
+<p style="text-align:center;">
 CelebA faces interpolation from [hou16]
 </p>
 
