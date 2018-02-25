@@ -39,17 +39,12 @@ color, intensity of light, location of an object, or different kinds of
 high level semantics of the image.
 
 
-<table class="image">
-<caption align="bottom">{{ Frey face manifold from [kingma14] }}</caption>
-<tr><td>
-<p style="text-align:center;">
-<img src="/assets/kingma14_freyface_10x10.jpg" width="280">
-</p>
-</td></tr>
-</table>
 
 <p style="text-align:center;">
+   <figure>
 <img src="/assets/kingma14_freyface_10x10.jpg" width="280">
+      <figcaption>This is my caption text.</figcaption>
+</figure>
 </p>
 
 <p style="text-align:center;">
