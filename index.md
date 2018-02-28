@@ -30,7 +30,7 @@ We focus on the last category in this
 monograph, as for the problems that we are going to visit it is a
 natural assumption to make.
 
-Specifically, the Variational Autoencoders introduced by \[26\] assumes
+Specifically, the Variational Autoencoders introduced by {% cite kingma2013auto %} assumes
 a continuous latent variable model, with a Gaussian prior in the latent
 space. It is a reasonable assumption to make in many cases, such as for
 visual imagery: when we move the latent representation of an image in
@@ -113,4 +113,8 @@ $$D_{KL}(q||p)$$
 
 ---
 
+References
+==========
+
+{% bibliography --cited %}
 
