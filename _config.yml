@@ -15,6 +15,6 @@ author:
 markdown: kramdown
 exclude:
     - 'latex_convert/'
- 
+
 plugins:
-    - 'jekyll/scholar'
+    - jekyll/scholar
