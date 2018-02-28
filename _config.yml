@@ -2,7 +2,7 @@ title: VAE Cookbook
 tagline: Chin-wei Huang, Shawn Tan
 # When building locally, put an empty string. Otherwise, put "/your-repo-name"
 # (the "/" is important)
-baseurl: "/"
+baseurl: ""
 # arXiv ID (as in "https://arxiv.org/abs/[arXiv id]")
 arxiv: ""
 repo:  "https://vaeriants.github.io"
@@ -15,3 +15,6 @@ author:
 markdown: kramdown
 exclude:
     - 'latex_convert/'
+ 
+plugins:
+    - 'jekyll/scholar'
