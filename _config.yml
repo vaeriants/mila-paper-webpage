@@ -1,5 +1,5 @@
-title: VAE Cookbook
-tagline: Chin-wei Huang, Shawn Tan
+title: VAEriants
+tagline: A guide to Deep Graphical Models
 # When building locally, put an empty string. Otherwise, put "/your-repo-name"
 # (the "/" is important)
 baseurl: ""

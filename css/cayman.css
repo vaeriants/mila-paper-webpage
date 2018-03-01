@@ -66,6 +66,35 @@ a {
     .page-header {
       padding: 2rem 1rem; } }
 
+
+.post-header {
+  color: #fff;
+  background-color: #159957;
+  background-image: linear-gradient(210deg, #139ac6, #141E24);
+  display: flex;
+}
+.post-header img {
+    max-height: 5rem;
+	display:block;
+	margin: 0.5rem;
+}
+
+@media screen and (min-width: 64em) {
+  .post-header {
+    padding: 0.5rem 1rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .post-header {
+    padding: 0.5rem 1rem; } }
+@media screen and (max-width: 42em) {
+  .post-header {
+    padding: 0.2rem 0.5rem; } }
+
+.post-header .project-name {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem; }
