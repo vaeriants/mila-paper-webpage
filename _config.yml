@@ -12,7 +12,8 @@ author:
   url: "https://blog.wtf.sg"
 
 # Leave this as is
-markdown: kramdown
+kramdown:
+    math_engine: nil
 exclude:
     - 'latex_convert/'
 
