@@ -1,7 +1,21 @@
----
-layout: default
----
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-{{ content }}
+<!DOCTYPE html>
+<html lang="en-us">
+  {% include head.html %}
+  <body>
+    <section class="main-content">
+      {{ content }}
+      <h2> What's next? </h2>
+      <ul>
+      {% for other_page in site.pages %}
+        {% assign page_name =  other_page.name | remove:".md" %}
+        {% if page.nextpages contains page_name %}
+            <li><a href="{{other_page.url}}">{{other_page.title}}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+      <h2> References </h2>
+      {% bibliography --cited %}
+      {% include page-footer.html %}
+    </section>
+  </body>
+</html>
