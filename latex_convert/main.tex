@@ -27,7 +27,7 @@
 \newcommand{\X}{\mathcal{X}}
 \newcommand{\Y}{\mathcal{Y}}
 \newcommand{\h}{h}
-\newcommand{\N}{\mathcal{N}}
+\newcommand{\N}{\mathcal{N}}	
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\ELBO}{\mathcal{L}}
 
@@ -105,6 +105,37 @@ LINKS (navigating page)
 \todo{[CW] overall missing: DRAW, variational memory models (few shot generation), variational addressing, beta-VAE, over-pruning problem, discrete LVM}
 
 
+\section{Some background stuff}
+
+\subsection{Maximum likelihood principle}
+
+When we have a model $p_\theta$, the likelihood of the data sampled from the true data distribution $p_\D$ tells us how good our model is. 
+We write it as $\E_{p_\D}[\log p_\theta(x)]$, where the subscript $\theta$ is the parameters of our model.
+$\theta$ is the sufficient statistics of our model, which can be thought of as a summary of the distribution; i.e. the mean and variance of a Gaussian distribution.
+
+In plain language, the Maximum Likelihood Principle in order to make our model a better model, we need to adapt it to make it seem more like the distribution that the data is sampled from.
+This is to find the values of the model parameter $\theta$ that maximizes the likelihood function.
+Most of the time the true data distribution is not available, so we would instead have access to an empirical distribution which we call the training set.
+Suppose we have $n$ i.i.d. samples, so the likelihood of this training data can be written as a sum of $n$ terms; the \textit{maximum likelihood estimate} (MLE) is 
+$$\theta^* \in \{\underset{\theta}{\textnormal{argmax}} \sum_{i=1}^n\log p(x_n)\} $$
+
+
+So far we have been talking about the case of a single random variable.
+The same principle can be extended to 
+
+
+
+- what is maximum likelihood, maximum conditional likelihood, and maximum joint likelihood. 
+
+\subsection{Marginal likelihood}
+
+- In the face of partial observability ...
+
+- max complete data log likelihood
+
+
+
+
 
 \section{Variational Autoencoders:\\Not just an autoencoder.}
 
@@ -121,12 +152,18 @@ In the long history of research into artificial neural networks, autoencoders ar
 
 
 They are commonly used to learn an encoding of the input. Most use a dimension bottleneck in the hidden layers to achieve a non-linear dimension reduction, but it is also sometimes useful to use a higher dimension, like in sparse autoencoders. During the resurgence of neural networks as deep learning, autoencoders were largely used to do pretraining.
+\citep{bengio2013generalized} first interprets a special kind of autoencoder, called the denoising autoencoders, as a generative model. 
+One connection to make is that in their work, an unstructured noise is injected to the data, 
 
 The introduction of VAEs \citep{kingma2013auto} interprets the autoencoder as a graphical model with the encoding being a latent variable to be inferred. While autoencoders on their own weren’t a probabilistic model before, the VAE framework offers an alternative look at them as such. 
 
 Because they were introduced as a generative model, one of the more common applications of VAEs is to generate images, i.e: sampling from a Gaussian distribution and pushing that through the decoder. Another application of VAEs are what autoencoders were used for before: learning non-linear representations of the input.
 
-However, the framework VAEs introduce is capable of much more. In DeepMind's paper on the topic, they refer to these models as Deep Latent Gaussian Models (DLGMs) \citep{rezende2014stochastic}. We think this may be more descriptive, although we need not limit ourselves to Gaussian distributions. Sure, you \emph{can} use VAEs to autoencode, but using them for just that is missing the point.
+However, the framework VAEs introduce is capable of much more. 
+In DeepMind's paper on the topic, they refer to these models as Deep Latent Gaussian Models (DLGMs) \citep{rezende2014stochastic}. 
+We think this may be more descriptive, although we need not limit ourselves to Gaussian distributions. 
+Sure, you \emph{can} use VAEs to autoencode, but using them for just that is missing the point \cite{chen2016variational}.
+
 
 \todo[inline, color=green!40]{Explain how to improve}
 
@@ -365,13 +402,27 @@ Unless our $\condprob{p}{}{\x}{\z}$ is simple (a linear mapping, for example), t
 &\approx \frac{1}{N} \sum^N_{i=1} \condprob{p}{}{\x}{\z_i}
 \end{align*}
 
+\begin{figure}[tbh]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/mixture_bad.png}
+%\caption{.}
+\vfill
+\includegraphics[width=0.45\textwidth]{figures/mixture_good.png}
+\caption{\small When sampling from the prior (say, it's a uniform binary code), we end up updating the same class-conditional ${\condprob{p}{}{\x=x}{\z=j}}$ for some $j\in\{1,2\}$ and for all $x$ in the data set. 
+Thus, there's no difference between the learned latent code $j$ (top).
+If we sample more cleverly by grouping the data points, and assigning larger probability to $p_1(z=j)$ for group 1 and to $p_2$ for group 2, different latent code $j$ will be updated to correspond to a different and sharper class-conditional likelihood ${\condprob{p}{}{\x}{\z=j}}$ (bottom). }
+\label{fig:fromprior1}
+\end{center}
+\end{figure}
+
 \begin{figure}
 \begin{center}
 \includegraphics[width=0.85\textwidth]{figures/q_vs_noq.png}
 \caption{Left: Sampling from $\prob{p}{}{\x}$, Right: Sampling from $\condprob{q}{}{\x}{\z}$. Using an approximate posterior $q$ narrows down the region in the latent space.}
+\label{fig:fromprior2}
 \end{center}
 \end{figure}
-The problem with this approach is that it has \emph{high variance}. Think about what we are trying to do here: We have $\x$, and we're trying to maximise $\prob{p}{}{\z}$. However, what the latent variable model is saying is that there is \emph{some} or \emph{several} $\z$s that will generate the observed $\x$. But because we don't know what those $\z$s are, we're just randomly picking out a few from the distribution, pushing them through the generative process, and hoping they hit the mark.
+The problem with this approach is that it has \emph{high variance} (see Figure \ref{fig:fromprior1} and \ref{fig:fromprior2}). Think about what we are trying to do here: We have $\x$, and we're trying to maximise $\prob{p}{}{\z}$. However, what the latent variable model is saying is that there is \emph{some} or \emph{several} $\z$s that will generate the observed $\x$. But because we don't know what those $\z$s are, we're just randomly picking out a few from the distribution, pushing them through the generative process, and hoping they hit the mark.
 
 Here's where $q$ comes in to save the day (Yes, just like Star Trek).
 
