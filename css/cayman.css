@@ -93,6 +93,13 @@ a {
   margin-top: 2rem;
   margin-left: 2rem;
   font-size: 1.5rem;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+.post-header .project-name:hover{
+  text-decoration: none;
+  color: #57defa;;
+  text-shadow:0.001rem;
 }
 
 .project-name {
